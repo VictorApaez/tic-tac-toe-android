@@ -1,67 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#3A2493"
+    android:padding="16dp">
+
 
     <LinearLayout
-        android:id="@+id/textView4"
+        android:id="@+id/gridCards"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="350dp"
+        android:columnCount="2"
+        android:padding="16dp"
+        android:rowCount="1">
 
-        <TextView
+        <androidx.cardview.widget.CardView
+            android:id="@+id/player1Card"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="223dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="8dp"
+            android:layout_margin="8dp"
+            app:cardElevation="4dp">
 
-            android:layout_width="match_parent"
-            android:layout_height="74dp"
-            android:text="TextView" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/player1Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="Player 1"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                <TextView
+                    android:id="@+id/player1WinCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="32sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/player2Card"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="223dp"
+            android:layout_gravity="center"
+            android:layout_row="0"
+            android:layout_margin="8dp"
+            android:layout_column="1"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+            <TextView
+                android:id="@+id/player2Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Player 2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                <TextView
+                    android:id="@+id/player2WinCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="32sp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
     <GridLayout
         android:id="@+id/gridLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:layout_below="@+id/textView4"
         android:columnCount="3"
         android:padding="16dp"
-        android:rowCount="3">
+        android:rowCount="3"
+        android:background="#6740e6">
 
         <Button
             android:id="@+id/button0"
-            style="@style/GameBoxStyle" />
+            style="@style/GameBoxStyle"
+            app:backgroundTint="#3A2493"/>
 
         <Button
             android:id="@+id/button1"
-            style="@style/GameBoxStyle" />
+            style="@style/GameBoxStyle"
+            app:backgroundTint="#3A2493"/>
 
         <Button
             android:id="@+id/button2"
-            style="@style/GameBoxStyle" />
+            style="@style/GameBoxStyle"
+            app:backgroundTint="#3A2493"/>
+
 
         <Button
             android:id="@+id/button3"
-            style="@style/GameBoxStyle" />
-
+            style="@style/GameBoxStyle"
+            app:backgroundTint="#3A2493"/>
         <Button
             android:id="@+id/button4"
-            style="@style/GameBoxStyle" />
+            style="@style/GameBoxStyle"
+            app:backgroundTint="#3A2493"/>
 
         <Button
             android:id="@+id/button5"
-            style="@style/GameBoxStyle" />
+            style="@style/GameBoxStyle"
+            app:backgroundTint="#3A2493"/>
 
         <Button
             android:id="@+id/button6"
-            style="@style/GameBoxStyle" />
+            style="@style/GameBoxStyle"
+            app:backgroundTint="#3A2493"/>
 
         <Button
             android:id="@+id/button7"
-            style="@style/GameBoxStyle" />
+            style="@style/GameBoxStyle"
+            app:backgroundTint="#3A2493"/>
 
         <Button
             android:id="@+id/button8"
-            style="@style/GameBoxStyle" />
+            style="@style/GameBoxStyle"
+            app:backgroundTint="#3A2493"/>
+
 
     </GridLayout>
 
-</RelativeLayout>
+</LinearLayout>
